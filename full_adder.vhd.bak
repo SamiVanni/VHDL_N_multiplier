@@ -1,0 +1,36 @@
+-- Sum truth table
+-- A - - B - - C - - S - - Cout
+-- 0 - - 0 - -  0 - - 0 - - 0
+-- 0 - - 0 - -  1 - - 1 - - 0
+-- 0 - - 1 - -  0 - - 1 - - 0
+-- 0 - - 1 - -  1 - - 0 - - 1
+-- 1 - - 0 - -  0 - - 1 - - 0
+-- 1 - - 0 - -  1 - - 0 - - 1
+-- 1 - - 1 - -  0 - - 0 - - 1
+-- 1 - - 1 - -  1 - - 1 - - 1
+-- Sum = Cin XOR (A XOR B)
+-- Cout = A B + B Cin + A Cin
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity full_adder is
+
+port (
+  A  :  in std_logic;
+  B  :  in  std_logic;
+  Sum  :  out std_logic;
+  Cin  :  in  std_logic;
+  Cout  :  out std_logic);
+
+end entity;
+ 
+architecture implementation of full_adder is
+
+begin
+
+Sum <= Cin XOR (A XOR B);
+Cout <= A AND B OR B AND Cin OR A AND Cin;
+
+end architecture;

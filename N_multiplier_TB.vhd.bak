@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity N_multiplier_TB is
+
+end entity;
+ 
+architecture TB of N_multiplier_TB is
+
+begin
+
+Sum <= i_Cin XOR (A XOR B);
+o_Cout <= (A AND B) OR (B AND i_Cin) OR (A AND i_Cin);
+
+end architecture;

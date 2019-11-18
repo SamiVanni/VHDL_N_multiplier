@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity rc_adder is
+
+port (
+  A_word  	:  in std_logic_vector(adder_width - 1 downto 0);
+  B_word  	:  in std_logic_vector(adder_width - 1 downto 0);
+  Sum_word  :  out std_logic_vector(adder_width - 1 downto 0)
+  Cin  		:  in  std_logic;
+  Cout  		:  out std_logic);
+
+end entity;
+
+architecture implementation of rc_adder is
+
+begin
+
+
+end architecture;

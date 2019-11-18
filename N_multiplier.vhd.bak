@@ -1,0 +1,44 @@
+entity N_multiplier is
+
+generic (
+	data_width : positive;
+	result_width : positive
+	);
+
+port (
+	Multiplicand 	: in std_logic_vector(data_width - 1 downto 0);
+	Multiplier 		: in std_logic_vector(data_width - 1 downto 0);
+	Result			: out std_logic_vector(result_width - 1 downto 0)
+	);
+
+end entity;
+
+architecture implementation of N_multiplier is
+
+begin
+
+multiplier : for i in data_width-1 downto 0 generate
+
+signal and_vector : std_logic_vector(data_width - 1 downto 0);
+
+begin
+
+	
+
+	adder_cell : if i=0 generate
+	
+		Multiplier((data_width/2)-1 downto 0) 
+	
+		--first cell
+		add_bit : entity full_adder
+		generic map (
+			data_width => data_width
+			);
+			
+		port map
+
+
+
+end generate multiplier
+
+end architecture;
